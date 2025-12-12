@@ -1,0 +1,58 @@
+/* styles.css */
+
+/* Basic reset & variables */
+* { box-sizing: border-box; }
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --text: #e6eef8;
+  --muted: #9fb0c8;
+  --accent: #4fc3f7;
+  --radius: 10px;
+  --gap: 1rem;
+  --container-max: 900px;
+  --nav-height: 64px;
+}
+
+/* Page base */
+html,body{ height:100%; margin:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.5;}
+.container{ max-width:var(--container-max); margin:0 auto; padding:1rem; }
+
+/* Header */
+.site-header{ background:transparent; position:sticky; top:0; z-index:10; }
+.site-header .container{ display:flex; align-items:center; gap:1rem; height:var(--nav-height); }
+.logo{ margin:0; font-size:1.1rem; letter-spacing:0.2px; }
+.nav{ margin-left:auto; display:flex; gap:1rem; align-items:center; }
+.nav a{ color:var(--muted); text-decoration:none; padding:6px 8px; border-radius:6px; }
+.nav a:hover{ color:var(--text); background:rgba(255,255,255,0.02); }
+
+/* Mobile nav toggle */
+.nav-toggle{ display:none; background:none; border:1px solid rgba(255,255,255,0.04); color:var(--text); padding:6px 8px; border-radius:6px; }
+
+/* Hero */
+.hero{ display:flex; gap:1.5rem; align-items:center; padding:2rem 0; }
+.avatar{ width:120px; height:120px; border-radius:50%; object-fit:cover; border:3px solid rgba(255,255,255,0.04); }
+
+/* Sections */
+section{ margin-block:1.25rem 2rem; }
+h3{ margin:0 0 0.6rem 0; color:var(--text); }
+.projects-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1rem; }
+.project{ background:var(--card); padding:1rem; border-radius:var(--radius); box-shadow:0 6px 18px rgba(3,6,12,0.6); }
+.project h4{ margin:0 0 .5rem 0; }
+.cta{ display:inline-block; margin-top:.5rem; padding:.45rem .7rem; background:var(--accent); color:#022; border-radius:8px; text-decoration:none; }
+
+/* Contact form */
+form label{ display:block; margin-bottom:.7rem; }
+input, textarea{ width:100%; padding:.6rem .7rem; border-radius:8px; border:1px solid rgba(255,255,255,0.05); background:transparent; color:var(--text); }
+button{ padding:.6rem .9rem; border-radius:8px; border:0; background:var(--accent); cursor:pointer; }
+
+/* Footer */
+.site-footer{ padding:1rem 0; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02); }
+
+/* Responsive: small screens */
+@media (max-width:720px){
+  .hero{ flex-direction:column; text-align:center; }
+  .nav{ position:absolute; top:64px; left:0; right:0; background:rgba(3,6,12,0.9); flex-direction:column; padding:1rem; display:none; }
+  .nav.show{ display:flex; }
+  .nav-toggle{ display:inline-block; margin-left:auto; }
+}

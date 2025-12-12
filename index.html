@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Personal Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Your Name</h1>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <nav id="main-nav" class="nav" role="navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container">
+      <img src="profile.jpg" alt="Your Name" class="avatar" />
+      <div>
+        <h2>Hi — I’m Your Name</h2>
+        <p>Frontend tinkerer, student, or whatever you want to put here.</p>
+        <p><a href="#contact" class="cta">Get in touch</a></p>
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <h3>About</h3>
+      <p>Write a short bio — your skills, interests, what you're learning.</p>
+    </section>
+
+    <section id="projects" class="container">
+      <h3>Projects</h3>
+      <div class="grid projects-grid">
+        <article class="project">
+          <h4>Project 1</h4>
+          <p>Short description. <a href="#">Demo</a></p>
+        </article>
+        <article class="project">
+          <h4>Project 2</h4>
+          <p>Short description. <a href="#">Code</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h3>Contact</h3>
+      <form id="contact-form">
+        <label>
+          Name
+          <input name="name" type="text" required />
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+      <div id="form-msg" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> Your Name — <a href="#">Resume</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
